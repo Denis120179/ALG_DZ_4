@@ -1,14 +1,19 @@
+// Программа для реализации операции вставки в красно-черном дереве.
 import java.util.Scanner;
 
 class node {
+
   node left, right;
   int data;
+
   // красный ==> true, черный ==> false
   boolean color;
+
   node(int data) {
     this.data = data;
     left = null;
     right = null;
+
 // Новый узел, который создается, является всегда красного цвета.
     color = true;
   }
@@ -16,14 +21,18 @@ class node {
 
 public class dz_4 {
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
+
     dz_4 node = new dz_4();
     Scanner scan = new Scanner(System.in);
+
     char ch;
     do {
       System.out.println("Введите целое число");
+
       int num = scan.nextInt();
       root = node.insert(root, num);
+
       node.inorder(root);
       System.out.println("\nВы хотите продолжить? (введите y или n)");
       ch = scan.next().charAt(0);
